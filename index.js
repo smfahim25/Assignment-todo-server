@@ -19,6 +19,7 @@ async function run() {
         await client.connect();
         const taskCollection = client.db('todo').collection('task');
 
+
         app.get('/task', async (req, res) => {
             const query = {}
             const cursor = taskCollection.find(query)
